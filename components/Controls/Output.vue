@@ -16,8 +16,12 @@ const charPool = computed(() => {
 })
 
 const transformed = computed(() => {
-  return props.value.split('').reduce((acc, val) => {
-    const zalgoChars = Array.from({length: 6}, () => charPool.value[Math.floor(Math.random() * charPool.value.length)])
+  return props.value.split('').reduce((acc, val, i) => {
+    const zalgoChars = Array.from({
+      length: props.value.length > 24
+          ? Math.floor(i/(props.value.length - 2) * 6)
+          : Math.floor((Math.min(i, 24)/24) * 6)
+    }, () => charPool.value[Math.floor(Math.random() * charPool.value.length)])
     return acc + val + zalgoChars.join('')
   }, '')
 })

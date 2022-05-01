@@ -11,9 +11,9 @@ defineEmits<{
 
 <template>
   <Dash class="settings">
-    <Checkbox v-model="modelValue.shouldGenerateDownwards"> Corrupt upwards </Checkbox>
-    <Checkbox v-model="modelValue.shouldGenerateUpwards"> Corrupt middle </Checkbox>
-    <Checkbox v-model="modelValue.shouldGenerateMiddle"> Corrupt downwards </Checkbox>
+    <Checkbox v-model="modelValue.shouldGenerateUpwards"> Corrupt upwards </Checkbox>
+    <Checkbox v-model="modelValue.shouldGenerateMiddle"> Corrupt middle </Checkbox>
+    <Checkbox v-model="modelValue.shouldGenerateDownwards"> Corrupt downwards </Checkbox>
   </Dash>
 </template>
 

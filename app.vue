@@ -1,13 +1,13 @@
 <template>
   <div class="background">
-    <h1 class="header">HE PROGRESSIVELY COMES</h1>
+    <h1 class="header"> HE PROGRESSIVELY COMES </h1>
     <Controls />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .background {
-  background: rgb(251, 191, 36) linear-gradient(transparent, red);
+  background: linear-gradient(transparent, black), url("/background.jpg") center;
 
   @apply
     h-screen
@@ -32,5 +32,12 @@
     font-bold
     italic
     text-center
+}
+</style>
+
+<style lang="scss">
+html {
+  @apply
+    bg-black
 }
 </style>

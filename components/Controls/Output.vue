@@ -17,7 +17,10 @@ const transformed = computed(() => props.value)
 
 <style scoped lang="scss">
 .output {
+  min-height: 5rem;
+
   @apply
+    box-content
     mt-16
     py-4
     px-8

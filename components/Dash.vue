@@ -6,9 +6,18 @@
 
 <style scoped lang="scss">
 .dash {
-  background-color: rgba(0,0,0,.1);
-  color: white;
+  @apply
+    w-screen
 
-  @apply w-screen py-10 px-20 text-center font-bold
+    py-10
+    px-20
+
+    bg-black
+    bg-opacity-10
+    backdrop-blur
+
+    text-white
+    text-center
+    font-bold
 }
 </style>

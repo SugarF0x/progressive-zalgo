@@ -27,6 +27,7 @@ const transformed = computed(() => {
   <div class="output">
     {{ transformed }}
   </div>
+  <CopyButton :value="transformed" :disabled="!transformed.length" />
 </template>
 
 <style scoped lang="scss">

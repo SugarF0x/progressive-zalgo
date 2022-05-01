@@ -1,11 +1,16 @@
 <script setup lang="ts">
-
+defineProps<{
+  modelValue: string
+}>()
+defineEmits<{
+  (e: "update:modelValue"): string
+}>()
 </script>
 
 <template>
   <label class="textarea-label">
     <span class="textarea-title"> Input </span>
-    <textarea class="textarea-control" />
+    <textarea class="textarea-control" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
   </label>
 </template>
 

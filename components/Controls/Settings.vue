@@ -1,11 +1,19 @@
 <script setup lang="ts">
+import { Settings } from '~/definitions'
 
+defineProps<{
+  modelValue: Settings
+}>()
+defineEmits<{
+  (e: "update:modelValue"): Settings
+}>()
 </script>
 
 <template>
   <Dash class="settings">
-    <Checkbox> piss shit </Checkbox>
-    <Checkbox> piss shit </Checkbox>
+    <Checkbox v-model="modelValue.shouldGenerateDownwards"> Corrupt upwards </Checkbox>
+    <Checkbox v-model="modelValue.shouldGenerateUpwards"> Corrupt middle </Checkbox>
+    <Checkbox v-model="modelValue.shouldGenerateMiddle"> Corrupt downwards </Checkbox>
   </Dash>
 </template>
 

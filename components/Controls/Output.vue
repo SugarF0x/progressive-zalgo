@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import { Settings } from '~/definitions'
 
+const props = defineProps<{
+  value: string
+  settings: Settings
+}>()
+
+const transformed = computed(() => props.value)
 </script>
 
 <template>
   <div class="output">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur, cupiditate debitis dignissimos fuga incidunt minima mollitia, placeat provident quasi quidem quisquam repellat saepe sapiente sequi veniam veritatis vero vitae voluptates, voluptatibus? Aspernatur autem culpa fuga nulla omnis quis quod.
+    {{ transformed }}
   </div>
 </template>
 
